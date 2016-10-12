@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Microsite</title>
+  <link href="/assets/manifest.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/application.css?body=1" media="all" rel="stylesheet" type="text/css" />
+
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="/QTHJ93oiksttCqu/WUtrqlrE8mX1va+55yKtc1H4CQ=" name="csrf-token" />
+</head>
+<body>
+
+
+  
+  <nav class="navbar login-header bg-primary">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img src="/images/logo.png" alt="kreatio" /></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse no-margin">
+      <%= form_tag :controller => 'subdomains', :action => 'index', :method => 'post',:remote=>true,:name=>"verify_login" do %>
+            <span class="error_valid"></span>
+        <div class="form-content">
+          <div class="login-field form-group">
+            <!--<input type="text" placeholder="Email Address" id="login_email"/>-->            
+            <%= text_field_tag :login_email,nil,:placeholder => "Email Address",:name=>"login[email]",:class=>"email-field form-control",:placeholder=>"Email Address",:name=>"login[email]"%>
+          </div><!--login-field-->
+          <div class="login-field form-group">
+            <!--<input type="text" placeholder="Password" id="login_password"/>-->            
+            <%=password_field_tag :login_password,nil,:placeholder=>"Password",:name=>"login[password]",:autofocus=>true,:class=>"username form-control"%>
+
+            <p class="forget-option col-xs-offset-2 col-md-offset-0">             
+              <%=link_to "Forgot password","",:class=>"forget_pass","data-target"=>"#forget_pass","data-toggle"=>"modal"%>
+            </p>
+          </div><!--login-field-->
+          <div class="login-field form-group">            
+            <%= submit_tag "Log In",:class=>"btn btn-info"%>
+          </div><!--login-field-->
+        </div><!--form-content-->
+        <!--</form>-->
+      <%end%>
+    </div><!--login-header-form-->
+  </div><!---->
+  </div>
+</nav>
+<div class="modal fade" id="forget_pass" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <i class="fa fa-fw fa-times" aria-hidden="true"></i>
+        </button>
+        <h4 class="modal-title text-center" id="myModalLabel">Reset your password</h4>
+
+      </div>
+      <div class="modal-body">
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+        <input tpe="text" class="form-control" />
+
+      </div>
+      <!--/modal-body-collapse -->
+      <div class="modal-footer">        
+        <%=button_to "SEND","#",:class=>"btn btn-info margin-20",:id=>"btnDelteYes"%>
+
+        <div class="row">
+          <div class="info-block padding-10 col-xs-12 bg-primary text-left">
+            <p>
+              Instructions for resetting the password has been sent to your email address. These instructions are valid for the next 24 hours
+            </p>
+            <p>
+              This email address does not exist in this system please correct and retry
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/modal-footer-collapse -->
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+
+        <script data-turbolinks-track="true" src="/assets/jquery.js?body=1" type="text/javascript"></script>
+<script data-turbolinks-track="true" src="/assets/bootstrap.min.js?body=1" type="text/javascript"></script>
+<script data-turbolinks-track="true" src="/assets/plugins/jquery-ui.min.js?body=1" type="text/javascript"></script>
+<script data-turbolinks-track="true" src="/assets/plugins/jquery.rss.js?body=1" type="text/javascript"></script>
+<script data-turbolinks-track="true" src="/assets/plugins/jquery.validate.min.js?body=1" type="text/javascript"></script>
+<script data-turbolinks-track="true" src="/assets/plugins/icheck.min.js?body=1" type="text/javascript"></script>
+<script data-turbolinks-track="true" src="/assets/plugins/moment.js?body=1" type="text/javascript"></script>
+<script data-turbolinks-track="true" src="/assets/plugins/jquery.colorbox-min.js?body=1" type="text/javascript"></script>
+<script data-turbolinks-track="true" src="/assets/plugins/clockpicker.js?body=1" type="text/javascript"></script>
+<script data-turbolinks-track="true" src="/assets/plugins/bootstrap-select.min.js?body=1" type="text/javascript"></script>
+<script data-turbolinks-track="true" src="/assets/plugins/bootstrap-datetimepicker.js?body=1" type="text/javascript"></script>
+<script data-turbolinks-track="true" src="/assets/plugins/jquery.sumoselect.min.js?body=1" type="text/javascript"></script>
+<script data-turbolinks-track="true" src="/assets/plugins/jquery.mousewheel.js?body=1" type="text/javascript"></script>
+<script data-turbolinks-track="true" src="/assets/plugins/jquery.jscrollpane.js?body=1" type="text/javascript"></script>
+<script data-turbolinks-track="true" src="/assets/plugins/jquery.tokeninput.js?body=1" type="text/javascript"></script>
+<script data-turbolinks-track="true" src="/assets/plugins/jsrender.js?body=1" type="text/javascript"></script>
+<script data-turbolinks-track="true" src="/assets/microsite.js?body=1" type="text/javascript"></script>
+<script data-turbolinks-track="true" src="/assets/application.js?body=1" type="text/javascript"></script>
+
+
+
+
+
+</body>
+</html>
